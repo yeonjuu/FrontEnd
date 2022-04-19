@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linkes to Float</title>
+    <style>
+        *{
+            /* content-box는 기본 CSS 박스 크기 결정법을 사용합니다.(padding/border 등을 모두 고려한 너비와 높이로 계산)
+            border-box는 테두리와 안쪽 여백의 크기도 요소의 크기로 고려합니다.  */
+            box-sizing: border-box;
+        }
+        a{
+            text-decoration: none;
+        }
+        .a:hover{
+            text-decoration: underline;
+        }
+        .a:link{
+            color : red;
+        }
+        .a:visited{
+            background-color: seagreen;
+        }
+        .a:active{
+            text-decoration: overline underline;
+        }
+        .b:link, .b:visited {
+            background-color: #f4a236;
+            color: white;
+            padding: 14px 25px;
+            text-align: center; 
+            display: inline-block;
+            cursor: default;
+        }
+        .c{
+            background-color: #f34bcd;
+            color : black;
+            padding : 14px 20px;
+            text-align: center;
+            display:inline-block;
+            cursor: progress;
+        }
+        .d{
+            /* cursor : attr ; 로 마우스포인터의 모양 번형가능, 필요한 모양으로 찾아보는게 좋을듯! 종류가 많다! */
+            cursor:move;
+        }
+        ul{
+            /* list-style : type position img ; , 물론 shortand말고 각자 지정도 가능 */
+            list-style-type: none;
+            border-left : 5px solid red;
+            background-color: lightgray;
+            padding : 5px 10px;
+        }
+        ul li{
+            margin : 5px;
+        }
+        table , th ,td{
+            border : 1px solid #333; 
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+        div.static{
+            position:static;
+            border : 3px solid #999;
+        }
+        div.relative{
+            position: relative;
+            border : 3px solid #f4a236;
+            left : 30px;
+            top : 20px;
+            width: 500px;
+            height: 400px;
+        }
+        div.fixed{
+            position : fixed;
+            bottom : 50%;
+            right: 0;
+            border : 3px solid #999;
+        }
+        div.absolute{
+            position : absolute;
+            border : 3px solid #999;
+            top : 40px;
+            right : 10px;
+        }
+        div.sticky{
+            position : sticky;
+            top: 0;
+            background-color: yellowgreen;
+            border : 3px solid #999;
+        }
+        #overflow{
+            width :400px;
+            height: 100px;
+            overflow: auto;
+            background-color: lightgray;
+        }
+        .navbar {
+            overflow : auto;
+            list-style-type: none;
+            background-color: #333;
+            margin : 0;
+            padding : 0;
+        }
+        li a {
+            color: white;
+            display : inline-block;
+            padding : 10px 16px;
+        }
+        .navbar li{
+            float : left;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS link to float</h1>
+    <a href="" class="a">link button</a>
+    <a href="" class="b">link button</a><br>
+    <a href="" class="c">link button</a>
+    <a href="" class="d">link button</a>
+    <div>
+        <strong>cursor property, can be useful a tag</strong><br>
+        <span style="cursor:auto">auto</span><br>
+        <span style="cursor:crosshair">crosshair</span><br>
+        <span style="cursor:default">default</span><br>
+        <span style="cursor:e-resize">e-resize</span><br>
+        <span style="cursor:help">help</span><br>
+        <span style="cursor:move">move</span><br>
+        <span style="cursor:n-resize">n-resize</span><br>
+        <span style="cursor:ne-resize">ne-resize</span><br>
+        <span style="cursor:nw-resize">nw-resize</span><br>
+        <span style="cursor:pointer">pointer</span><br>
+        <span style="cursor:progress">progress</span><br>
+        <span style="cursor:s-resize">s-resize</span><br>
+        <span style="cursor:se-resize">se-resize</span><br>
+        <span style="cursor:sw-resize">sw-resize</span><br>
+        <span style="cursor:text">text</span><br>
+        <span style="cursor:w-resize">w-resize</span><br>
+        <span style="cursor:wait">wait</span><br>   
+    </div>
+    <div class="static">postion : static;</div>
+    <div class="relative">postion : relative;
+        <div class="absolute">postion : absolute;</div>
+    </div>
+    <div class="fixed">postion : fixed;</div>
+    <h3>Position Sticky, Scroll Web Brower</h3>
+    <div class="sticky">postion : sticky;, Internet explorer doesnt support and Safari position : -webkit-sticky;</div>
+    <div style="padding-bottom : 1000px;">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ipsum necessitatibus dignissimos fugiat unde numquam, atque pariatur? Debitis obcaecati libero, eius fugiat quisquam eos quas impedit et excepturi, illum sit.</p>
+    </div>
+    <ul>
+        <li>html</li>
+        <li>css</li>
+        <li>javascript</li>
+    </ul>
+    <table>
+        <tr>
+            <th>Movie</th>
+            <th>Cast</th>
+            <th>Year</th>
+        </tr>
+        <tr>
+            <td>HarryPotter, secret stones</td>
+            <td>A B C</td>
+            <td>2001.04.29</td>
+        </tr>
+        <tr>
+            <td>Spider Man : no way back home</td>
+            <td>Tom holand Jan...</td>
+            <td>2017.03.13</td>
+        </tr>
+    </table>
+    <div style="padding-bottom:100px;">
+        <h2>Layout_overflow</h2>
+        <div id="overflow">
+            <h3>scroll and auto is different cotained text , </h3>
+            scroll always show scrollbar not overflow but auto isn't it. <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae accusamus at culpa quibusdam nobis quasi magni error laborum cumque autem? Iure suscipit blanditiis excepturi commodi obcaecati harum porro id odit!
+            Quia suscipit accusantium explicabo obcaecati eum labore aperiam ad maiores illum ducimus maxime laboriosam, impedit provident animi libero et quo reprehenderit excepturi aspernatur molestiae vero. Corrupti totam facilis dignissimos? Expedita.
+            Consectetur pariatur iusto explicabo deserunt a vero, recusandae minus accusantium maiores quisquam nam repudiandae tempora eveniet suscipit aut, iure quasi placeat! Aperiam similique, et sapiente quod vel quia quos pariatur.
+            Fuga blanditiis facere aperiam inventore voluptatum unde quod repellendus sint sapiente, praesentium quasi? Officia libero sunt, inventore, saepe cumque minima fuga illum culpa repellat fugit mollitia beatae neque magni incidunt!
+            Quis, deleniti adipisci repellendus enim illum placeat corporis eligendi eos. Sapiente distinctio itaque ullam. Eveniet ipsa, nesciunt facere, magnam consectetur laborum, eum et fuga necessitatibus quidem adipisci. Itaque, fugit aliquid!
+        </div>
+    </div>
+    <h2>Float, for example Navigation Bar</h2>
+    <ul class="navbar">
+        <li><a href = "#">HOME</a></li>
+        <li><a href = "#">NEWS</a></li>
+        <li><a href = "#">CONTACT</a></li>
+        <li><a href = "#">ABOUT</a></li>
+    </ul>
+    <br>
+</body>
+</html>

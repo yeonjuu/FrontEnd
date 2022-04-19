@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>study css</title>
+    <!-- web-fonts : https://fonts.google.com 에서 찾아서 참조 가능~ 
+        Font-family 할때 무조건 fallback font 설정 (기본 : sans-serif, serif, monospace, cursive, fantasy) 
+        Font pairing 으로 해서 잘 어울리는 서체의 조합으로 설정하는 게 좋음-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- fontawesome 사이트에서 yourcode.js를 발급받아야 사용가능한 아이콘들  -->
+    <script src="https://kit.fontawesome.com/36972652bd.js" crossorigin="anonymous"></script>
+    <style>
+        div{
+            width: 200px;
+            border : 2px solid green;
+            padding: 50px;
+            margin: 10px;
+        }
+        /* outline/border는 다름, 
+        outline-width : thin, medium, thick (1px , 3px, 5px) 정도, 구체적 수치 가능 */
+        .a{
+            outline-style: solid;
+            outline-color: red;
+            outline-width: thin;
+        }
+        .b{
+            outline-style: solid;
+            outline-color: red;
+            outline-width: medium;
+        }
+        .c{
+            margin : 50px;
+            outline : 6px ridge rgba(55, 55, 179, 0.438);
+            /* offset : outline과 border 간의 간격을 나타냄 */
+            outline-offset: 15px;
+        }
+        .para{
+            border : none;
+            width : 100%;
+            padding : none;
+            margin : 0;
+            text-align: justify;
+            font-family : 'Audiowide' , sans-serif;
+        }
+        div > p{
+            /* 문자의 마지막 문장의 위치를 선정할 수 있음  */
+            text-align-last:center;
+            /* elements 사이의 white-space 를 컨트롤 할 수 있음  */
+            white-space: normal;
+            
+        }
+        .d{
+            /* direction: rtl;
+            unicode-bidi: bidi-override;
+            text-transform: uppercase; */
+        }
+        h1{
+            /* text-decoration : line color style thinckness */
+            text-decoration: underline overline skyblue wavy 2px ;
+        }
+        h2{
+            /* text-shadow: horizon vertical blur color; */
+            text-shadow: 1px 2px 3px royalblue;
+        }
+        p.d{
+            font-variant: normal;
+            font-style: italic;
+        }
+        p.e{
+            font-variant: small-caps;
+            font-style: oblique;
+        }
+        p.f{
+            font : normal bold 20px/30px Georgia, serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="a">box model</div>
+    <div class="b">box model</div>
+    <div class="c">box model</div>
+    <div class="para">
+        <h1>TEXT FORMATTING</h1>
+        <h2>TEXT FORMATTING</h2>
+        Text property, text-align : justify each line is streched so that every line has equal width.
+        <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum officiis, quidem dolore repellendus, totam neque facilis commodi, accusamus voluptates sunt in maiores aut! Harum excepturi ipsum ipsam enim laboriosam officiis?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis maxime non ex dolorem odio sed nostrum qui. Earum, necessitatibus iusto.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, cumque.
+        <p class="d">Lorem ipsum dolor sit amet.</p>
+        </p>
+    </div>
+    <p class="d">This is a paragraph.</p>
+    <p class="e">This is a paragraph.</p>
+    <p class="f">The font is set to italic and bold, the font size is set to 12 pixels, the line height is set to 30 pixels, and the font family is Georgia.</p>
+    <h3>ICONS</h3>
+    <span>font-awsome</span>
+    <i class="fas fa-cloud"></i>
+    <i class="fas fa-heart"></i>
+    <i class="fas fa-car"></i>
+    <i class="fas fa-file"></i>
+    <i class="fas fa-bars"></i>
+    <i class="fa-solid fa-magnifying-glass"></i><br>
+    <span>bootstrap</span>
+    <i class="glyphicon glyphicon-cloud"></i>
+    <i class="glyphicon glyphicon-remove"></i><br>
+    <span>google</span>
+    <i class="material-icons">cloud</i>
+    <i class="material-icons">favorite</i>
+    <i class="material-icons">attachment</i>
+</body>
+</html>
