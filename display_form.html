@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        .menu{
+            list-style-type: none;
+            background-color: black;
+            padding : 0;
+            margin: 0;
+        }
+        .menu li{
+            display: inline-block;
+        }
+        .menu a{
+            display: inline-block;
+            color : white;
+            text-decoration: none;
+            padding : 14px 16px;
+        }
+        .menu a:hover{
+            color : tomato;
+        }
+        .centered{
+            margin :auto;
+            width : 40%;
+            padding : 10px;
+            border : 2px solid red;
+            text-align: center;
+        }
+        .dropdown{
+            position: relative;
+            display : inline;
+
+        }
+        .dropdown-content{
+            position:absolute;
+            display:none;
+            min-width: 160px;
+            background-color: #f9f9f9;
+            padding : 12px;
+            z-index : 1;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0,0.2);
+        }
+        .dropdown:hover .dropdown-content{
+            display:block;
+        }
+        .dropdown-wrap{
+            position : relative;
+            display: inline-block;
+            margin : 0 10px;
+        }
+        .dropbtn{
+            width: 200px;
+            padding : 10px 14px;
+            font-size: 16px;
+            background-color: #333;
+            color : white;
+            cursor: pointer;
+        }
+        .dropbtn-content{
+            display : none;
+            position : absolute;
+            width: 100%;
+            box-shadow: 0px 6px 12px 0px rgba(0, 0, 0,0.2);
+            z-index: 1;
+        }
+        .dropdown-wrap:hover .dropbtn-content{
+            display: block;
+        }
+        .dropbtn-content a{
+            text-decoration: none;
+            font-size: 15px;
+            display: block;
+            color : black;
+            padding : 10px 12px;
+        }
+        .dropbtn-content a:hover{
+            background-color: #f9f9f9;
+        }
+        [class|=attr]{
+            background-color: yellowgreen;
+            width : 80%;
+            font-size :large;
+            margin-bottom: 5px;
+        }
+        [class^=attr]{
+            color : #333;
+            text-decoration: underline lightgray;
+        }
+        input[type="text"]{
+            border : none;
+            border-bottom: 2px solid rgb(157, 214, 43);
+            border-radius: 3px;
+            display : block;
+            width : 50%;
+            padding : 8px 2px;
+            box-sizing: border-box;    
+            margin : 5px;   
+        }
+        input[type="submit"]{
+            width : 50%;
+            text-align: center;
+            margin : 5px;
+            background-color: yellowgreen;
+            border : none;
+            font-size : 16px;
+            padding : 10px;
+        }
+        label{
+            margin : 5px;
+        }
+        input[type="submit"]:hover{
+            background-color: rgb(129, 173, 41);
+        }
+        #search{
+            background-image: url("images/search_icon.png");
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            background-size: 20px;
+            padding : 12px 35px;
+            border : 2px solid #999;
+            font-size : 16px;
+        }
+    
+    </style>
+</head>
+<body>
+    <ul class = "menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+    <div>
+        <h3> Align Property</h3>
+        <div class="centered">
+            the div is centered , marign : auto <br>
+            And text-align : center 
+        </div>
+    </div>
+    <div>
+        <h3>Selector Combinator</h3>
+        <p>Recommed this <a href="https://flukeout.github.io">Selector Game</a>, Flukeout!</p>
+    </div>
+    <h3>Dropdowns!</h3>
+    <div class="dropdown">
+        <span>Mouse over me </span>
+        <div class="dropdown-content">
+            <p>Hello World!</p>
+        </div>
+    </div>
+    <div class="dropdown-wrap">
+        <button class="dropbtn">Mouse over Me</button>
+        <div class ="dropbtn-content">
+            <a href ="#">link1</a>
+            <a href ="#">link2</a>            
+            <a href ="#">link3</a>
+        </div>
+    </div>
+    <h3>CSS Attribute Selector</h3>
+    <div>tag[attr], 로 특정 태그의 속성값을 선택해서 css를 정의 할 수 있다. </div>
+    <div>img attr, title~=___ , ____를 포함한 값의  css를 정의 수 있다</div>
+    <div class="attr-1">example1</div>
+    <div class="attr-2">example2</div>
+    <div class="others">example3</div>
+    <div class="attr3">example4</div>
+    <p>
+        [attr~=value], contain value (빈칸등 구분기호 필요)
+        [attr|=value], starting value (빈칸필요, hypen기호 가능)
+        [attr^=value], starting value (빈칸여부없이 시작단어 확인)
+        [attr$=value], ending value(구분기호 불필요)
+        [attr*=value], contain value everywhere (빈칸여부 없이가능)
+    </p>
+    <h3>Login Form</h3>
+    <div class="form_wrap">
+        <form class ="login">
+            <label>ID</label>
+            <input type="text">
+            <label>Password</label>
+            <input type="text">
+            <input type="submit" value ="Login"> 
+        </form>
+    </div>
+    <div>
+        <input type="text" id = "search" placeholder="Search.." >
+    </div>
+</body>
+</html>
