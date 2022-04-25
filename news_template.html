@@ -39,6 +39,51 @@
         .nav a:hover{
             background-color: rgb(102, 101, 101);
         }
+        .content{
+            background-color: lightgray;
+            padding : 5px;
+            margin-top : 5px;
+        }
+        .main{
+            float:left;
+            width : 75%;
+        }
+        .main_wrap{
+            border : 1px solid lightgray;
+        }
+        .side_trend , .side_photo{
+            width : 25%;
+            float: left;
+
+        }
+        .row::after{
+            clear: both;
+            content: "";
+            display:table;
+        }
+        .side_trend{
+            font-size : small; 
+            padding : 0 10px;
+        }
+        .side_photo{
+            font-size : small;
+            padding : 0 10px;
+        }
+        .photo_wrap{
+            border : 2px solid blue;
+            float : left;
+            
+        }
+        .photo{
+            border : 2px red solid;
+            text-align: center;
+            width: 60%;
+        }
+        .photo img{
+            width: 100%;
+            height: auto;
+        }
+
     </style>
 </head>
 <body>
@@ -55,6 +100,7 @@
             <li><a href="#">Category4</a></li>
         </ul>
     </div>
+    <div class = "main_wrap">
     <div class="row">
         <div class="main">
             <div class="content">
@@ -73,9 +119,15 @@
                     Aut impedit odit ut maiores ab, ipsam omnis reprehenderit vitae deserunt sunt repellendus.
                 </p>
             </div>
+            <div class="content">
+                <h2>HEADING</h2>
+                <h5>Title Description. April 21 2022</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Provident eum perferendis, vitae unde corrupti dolorem quod molestias. 
+                    Aut impedit odit ut maiores ab, ipsam omnis reprehenderit vitae deserunt sunt repellendus.
+                </p>
+            </div>
         </div>
-    </div>
-    <div class="row">
         <div class="side_trend">
             <h2>MOST-READ</h2>
             <div>Ranking1</div>
@@ -84,16 +136,25 @@
             <div>Ranking4</div>
             <div>Ranking5</div>
         </div>
-    </div>
-    <div class="row">
         <div class="side_photo">
             <h2>Photo Gallery</h2>
-            <div class="photo">
-                <img src="images/spring.jpg" alt="img1">
-                <img src="images/spring.jpg" alt="img2">
-                <img src="images/spring.jpg" alt="img3">
+            <div class="photo_wrap">
+                <div class="photo">
+                    <img src="images/spring.jpg" alt="img1">
+                </div>
+                <div class="photo">
+                    <img src="images/spring.jpg" alt="img2">
+                </div>
+                <div class="photo">
+                    <img src="images/spring.jpg" alt="img3">
+                </div>
+                <div>
+                    이미지 관련 CSS 문제
+                </div>
             </div>
+            
         </div>
+    </div>
     </div>
     <div class="footer">
         <h1>Footer</h1>
