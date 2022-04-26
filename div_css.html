@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathFunction</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        div{
+            border : 1px solid black;
+            margin-bottom: 1em;
+            padding : 5px;
+        }
+        #div1 {
+            width: calc(100% - 100px);
+            background-color: yellow;
+        }
+        #div2{
+            width : max(50%, 300px);
+            background-color: green;
+        }
+        #div3{
+            width: min(50%, 300px);
+            background-color: blueviolet;
+        }
+        #div4{
+            width : calc(100%-200px);
+            background-image : url("images/spring.jpg");
+            background-repeat: repeat;
+            background-position: left;
+            border-radius: 10px;
+        }
+        #div5{
+            border : 10px solid transparent;
+            border-image: url(images/border.png) 50 round;
+        }
+        #div6{
+            border : 10px solid transparent;
+            border-image : url("images/border.png");
+            border-image-slice: 27;
+            border-image-repeat: round;
+        }
+        #div7{
+            border: 10px solid transparent;
+            border-image : url("images/border.png");
+            border-image-slice: 30;
+       }
+       #div8{
+           border : none;
+           /* background-image : url("images/search_icon.png") , url("images/paper.png");
+           background-position: right top, left bottom;
+           background-repeat: no-repeat, repeat; */
+           background : url("images/search_icon.png") right top no-repeat , url("images/paper.png") left bottom repeat;
+           background-size: 100px, 150px;
+       }
+       #div9{
+           height: 120px;
+           width: 150px;
+           position: relative;
+           overflow : auto;
+
+       }
+       #div9::before{
+            content : "";
+            background : url("images/spring.jpg") ;
+            opacity: 0.3;
+            background-repeat: no-repeat;
+            background-size: contain;
+            position : absolute;
+            top : 0;
+            left : 0;
+            right : 0;
+            bottom: 0;
+        }
+       #div10{
+           background : url("images/spring.jpg") ;
+           height: 120px;
+           width: 150px;
+           background-repeat: no-repeat;
+           background-size: cover;
+           opacity: 0.3;
+       }
+       #div11{
+           border : 10px solid black;
+           background : url("images/search_icon.png") no-repeat;
+           background-size: 80px;
+           padding : 30px;
+       }
+       #div12{
+           border : 10px solid black;
+           background : url("images/search_icon.png") no-repeat;
+           background-size: 80px;
+           padding : 30px;
+           background-origin: border-box;
+       }
+       #div13{
+           border : 10px solid black;
+           background : url("images/search_icon.png") no-repeat;
+           background-size: 80px;
+           padding : 30px;
+           background-origin: content-box;
+       }
+    </style>
+</head>
+<body>
+    <h1>Math Function</h1>
+    <p>how to use math function? syntax calc(expression)</p>
+    <div id="div1">
+        Write some text..
+    </div>
+    <div id="div2">
+        Write some text..
+    </div>
+    <div id="div3">
+        Write some text..
+    </div>
+    <div id="div4">
+        Write some text..
+    </div>
+    <div id="div5">
+        An image as a border
+    </div>
+    <div id="div6">
+        An image as a border
+    </div>
+    <div style="border : none;">
+        <img src="images/border.png" alt="border style">
+    </div>
+    <div id="div7">
+        An iamge as a border
+    </div>
+    <div id="div8">
+        <h4>Multiple Background</h4>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Natus voluptate laboriosam reiciendis est delectus consequatur ducimus adipisci perferendis nemo, 
+            deserunt unde maxime expedita consectetur laborum maiores sunt commodi, 
+            distinctio asperiores.
+        </p>
+    </div>
+    <div id="div9">
+        <h4>Background-Size : contain</h4>
+        <p>control only background opacity using pseudo-element (::before) </p>
+    </div>
+    <div id="div10">
+        <h4>Background-Size : cover</h4>
+    </div>
+    <div id ="div11">
+        <h3>Default, background-origin</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Officia saepe aspernatur delectus itaque, blanditiis placeat quia sint. Officiis, iste! 
+            Cumque possimus quibusdam cum ut similique voluptates quidem quia eos at!
+        </p>
+    </div>
+    <div id ="div12">
+        <h3>
+        <h3>Border-box, background-origin</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Officia saepe aspernatur delectus itaque, blanditiis placeat quia sint. Officiis, iste! 
+            Cumque possimus quibusdam cum ut similique voluptates quidem quia eos at!
+        </p>
+    </div>
+    <div id ="div13">
+        <h3>Content-box, background-origin</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Officia saepe aspernatur delectus itaque, blanditiis placeat quia sint. Officiis, iste! 
+            Cumque possimus quibusdam cum ut similique voluptates quidem quia eos at!
+        </p>
+    </div>
+    
+</body>
+</html>
