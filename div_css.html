@@ -5,105 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MathFunction</title>
-    <style>
-        *{
-            box-sizing: border-box;
-        }
-        div{
-            border : 1px solid black;
-            margin-bottom: 1em;
-            padding : 5px;
-        }
-        #div1 {
-            width: calc(100% - 100px);
-            background-color: yellow;
-        }
-        #div2{
-            width : max(50%, 300px);
-            background-color: green;
-        }
-        #div3{
-            width: min(50%, 300px);
-            background-color: blueviolet;
-        }
-        #div4{
-            width : calc(100%-200px);
-            background-image : url("images/spring.jpg");
-            background-repeat: repeat;
-            background-position: left;
-            border-radius: 10px;
-        }
-        #div5{
-            border : 10px solid transparent;
-            border-image: url(images/border.png) 50 round;
-        }
-        #div6{
-            border : 10px solid transparent;
-            border-image : url("images/border.png");
-            border-image-slice: 27;
-            border-image-repeat: round;
-        }
-        #div7{
-            border: 10px solid transparent;
-            border-image : url("images/border.png");
-            border-image-slice: 30;
-       }
-       #div8{
-           border : none;
-           /* background-image : url("images/search_icon.png") , url("images/paper.png");
-           background-position: right top, left bottom;
-           background-repeat: no-repeat, repeat; */
-           background : url("images/search_icon.png") right top no-repeat , url("images/paper.png") left bottom repeat;
-           background-size: 100px, 150px;
-       }
-       #div9{
-           height: 120px;
-           width: 150px;
-           position: relative;
-           overflow : auto;
-
-       }
-       #div9::before{
-            content : "";
-            background : url("images/spring.jpg") ;
-            opacity: 0.3;
-            background-repeat: no-repeat;
-            background-size: contain;
-            position : absolute;
-            top : 0;
-            left : 0;
-            right : 0;
-            bottom: 0;
-        }
-       #div10{
-           background : url("images/spring.jpg") ;
-           height: 120px;
-           width: 150px;
-           background-repeat: no-repeat;
-           background-size: cover;
-           opacity: 0.3;
-       }
-       #div11{
-           border : 10px solid black;
-           background : url("images/search_icon.png") no-repeat;
-           background-size: 80px;
-           padding : 30px;
-       }
-       #div12{
-           border : 10px solid black;
-           background : url("images/search_icon.png") no-repeat;
-           background-size: 80px;
-           padding : 30px;
-           background-origin: border-box;
-       }
-       #div13{
-           border : 10px solid black;
-           background : url("images/search_icon.png") no-repeat;
-           background-size: 80px;
-           padding : 30px;
-           background-origin: content-box;
-       }
-    </style>
+    <link rel="stylesheet" href="css/div_css.css">
 </head>
 <body>
     <h1>Math Function</h1>
@@ -169,6 +71,27 @@
             Cumque possimus quibusdam cum ut similique voluptates quidem quia eos at!
         </p>
     </div>
-    
+    <div id="grad1">
+        linear-gradient
+    </div>
+    <div id="grad2">
+        linear-gradient
+    </div>
+    <div id="grad_wrap">
+        <div id="grad3">
+            radial-gradient
+        </div>
+        <div id="grad4">
+            radial-gradient
+        </div>
+        <div id="grad5">
+            radial-gradient
+        </div>
+        <div id="grad6">
+            radial-gradient
+        </div>
+    </div>
+    <div id="grad7">
+    </div>
 </body>
 </html>
