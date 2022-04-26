@@ -20,24 +20,24 @@ div{
 }
 #div4{
     width : calc(100%-200px);
-    background-image : url("images/spring.jpg");
+    background-image : url("../images/spring.jpg");
     background-repeat: repeat;
     background-position: left;
     border-radius: 10px;
 }
 #div5{
     border : 10px solid transparent;
-    border-image: url(images/border.png) 50 round;
+    border-image: url(../images/border.png) 50 round;
 }
 #div6{
     border : 10px solid transparent;
-    border-image : url("images/border.png");
+    border-image : url("../images/border.png");
     border-image-slice: 27;
     border-image-repeat: round;
 }
 #div7{
     border: 10px solid transparent;
-    border-image : url("images/border.png");
+    border-image : url("../images/border.png");
     border-image-slice: 30;
 }
 #div8{
@@ -45,7 +45,7 @@ div{
    /* background-image : url("images/search_icon.png") , url("images/paper.png");
    background-position: right top, left bottom;
    background-repeat: no-repeat, repeat; */
-   background : url("images/search_icon.png") right top no-repeat , url("images/paper.png") left bottom repeat;
+   background : url("../images/search_icon.png") right top no-repeat , url("../images/paper.png") left bottom repeat;
    background-size: 100px, 150px;
 }
 #div9{
@@ -57,7 +57,7 @@ div{
 }
 #div9::before{
     content : "";
-    background : url("images/spring.jpg") ;
+    background : url("../images/spring.jpg") ;
     opacity: 0.3;
     background-repeat: no-repeat;
     background-size: contain;
@@ -68,7 +68,7 @@ div{
     bottom: 0;
 }
 #div10{
-   background : url("images/spring.jpg") ;
+   background : url("../images/spring.jpg") ;
    height: 120px;
    width: 150px;
    background-repeat: no-repeat;
@@ -77,20 +77,20 @@ div{
 }
 #div11{
    border : 10px solid black;
-   background : url("images/search_icon.png") no-repeat;
+   background : url("../images/search_icon.png") no-repeat;
    background-size: 80px;
    padding : 30px;
 }
 #div12{
    border : 10px solid black;
-   background : url("images/search_icon.png") no-repeat;
+   background : url("../images/search_icon.png") no-repeat;
    background-size: 80px;
    padding : 30px;
    background-origin: border-box;
 }
 #div13{
    border : 10px solid black;
-   background : url("images/search_icon.png") no-repeat;
+   background : url("../images/search_icon.png") no-repeat;
    background-size: 80px;
    padding : 30px;
    background-origin: content-box;
@@ -152,4 +152,35 @@ div{
     height: 200px;
     border-radius: 50%;
     background-image: repeating-conic-gradient(red 0deg 20deg, yellow 20deg 40deg , blue 40deg 60deg);
+}
+#shadow{
+    border : none;
+    color : white;
+    text-shadow: 3px 3px 5px darkblue;
+    width : 300px;
+    height: 200px;
+    font-size : 25px;
+    background-color: coral;
+    text-align: center;
+    box-shadow: 10px 10px 3px lightpink, 15px 15px 3px lightgreen ;
+}
+div.card{
+    width : 250px;
+    text-align : center;
+    border : none;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.24), 0px 6px 20px rgba(0, 0, 0, 0.15);
+    padding : 0;
+}
+div.header{
+    color : white;
+    border : inherit;
+    background-color : coral;
+    padding : 15px;
+    font-size : 25px;
+    margin : 0;
+}
+div.container{
+    border: inherit;
+    padding : 10px;
+    margin : 0;
 }
