@@ -195,3 +195,34 @@ div.container{
     padding : 10px;
     margin : 0;
 }
+div.rotate_2d{
+    border : none;
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    transform: rotate(20deg);
+}
+div.rotate_3d{
+    border : none;
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    transform: rotateX(30deg);
+}
+.trans{
+    background-color: green;
+    width: 100px;
+    height: 100px;
+    /* transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function : linear | ease | ease-in | --
+    transtiton-delay : 1s 
+    shortcut below*/
+    transition: width 2s , height 3s , transform 2s ease 1s;
+
+}
+.trans:hover{
+    width: 300px;
+    height: 300px;
+    transform: rotate(180deg);
+}
