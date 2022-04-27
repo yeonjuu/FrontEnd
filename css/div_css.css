@@ -145,8 +145,19 @@ div{
    /* Default shape of radial-gradient is ellipse */
    background-image: radial-gradient(farthest-corner at 60% 55%,red , yellow , black);
 }
+#grad3, #grad4 , #grad5 , #grad6{
+    float : left;
+}
+#grad_wrap{
+    overflow: auto;
+}
+#grad_wrap::after{
+    clear : both;
+    content : "";
+    display : table;
+}
+
 #grad7{
-    display: block;
     border : none;
     width: 200px;
     height: 200px;
