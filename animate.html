@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        @keyframes sample {
+            /* from : 0% , to : 100% (animation-duration), 
+            ex) 0%{value} 37%{value} 100%{value} , more specify sets */
+            0% {background-color: red; left : 0px; top :0px;}
+            25%{background-color: yellow; left : 100px; top:0px;}
+            50%{background-color: blue; left : 100px; top : 100px;}
+            75%{background-color: purple; left: 0px; top : 100px;}
+            100%{background-color: black; left : 0px ; top :0px;}        
+        }
+        div{
+            background-color : red;
+            width: 100px;
+            height: 100px;
+            position: relative;
+            animation-name: sample;
+            animation-duration: 2s;
+            /* animation-delay can be negative value */
+            animation-delay: 1s;
+            /* iteration-count can be infinite */
+            animation-iteration-count: 4;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+            /* shorthand animation  */
+            /* animation: sample 2s linear 1s 4 alternate forwards; */
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Animations</h1>
+    <div>
+    </div>
+</body>
+</html>
