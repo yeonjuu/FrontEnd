@@ -1,0 +1,104 @@
+:root{
+    --gray : #c5c5c5;
+    --green :  #2ec72e;
+}
+a{
+    text-decoration: none;
+    color : black;
+}
+.mask{
+    max-width: 600px;
+    height: 200px;
+    background: url("../images/paper.png") no-repeat;
+    overflow-y : scroll;
+    mask-image: linear-gradient(black,transparent);
+}
+.container{
+    position : relative;
+    width: 450px;
+    height: 400px;
+}
+.container img{
+    width: 100%;
+    height: 350px;
+    opacity: 0.6;
+}
+.container .btn{
+    display: inline-block;
+    position: absolute;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-size : 20px;
+    background-color: #2ec72e;
+    padding : 20px;
+    border : 1px solid lightgray;
+    transition: all 0.5s;
+}
+.btn span{
+    cursor: pointer;
+    display: inline-block;
+    position : relative;
+    transition: 0.5s;
+}
+.btn span::after{
+    content: "\00bb";
+    position: absolute;
+    top : 0;
+    right : -20px;
+    opacity: 0;
+    transition: 0.5s;
+}
+.btn:hover span{
+    padding-right : 25px;
+}
+.btn:hover span::after{
+    opacity: 1;
+    right : 0;
+}
+.pagination{
+    display: inline-block;
+}
+.pagination a{
+    font-size: 14px;
+    padding : 8px;
+}
+.pagination a:active{
+    background-color: var(--green);
+    border-radius: 5px;
+}
+.pagination a:hover{
+    background-color: var(--gray);
+    transition : background-color .3s;
+    border-radius: 5px;
+}
+.page_wrap{
+    text-align: center;
+}
+.newspaper h4{
+    column-span: all;
+}
+.newspaper{
+    /* set local variable  */ 
+    column-count : 3;
+    column-rule: 1px dashed var(--gray);
+}
+.change{
+    margin : 10px;
+}
+.change button{
+    font-size : 16px;
+    background-color : black;
+    font-family: monospace;
+    color : white;
+
+}
+
+@media screen and (orientation : landscape) {
+    body{
+        background-color : tan;
+    }
+    
+}
+
