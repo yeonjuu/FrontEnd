@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mask</title>
+    <link rel="stylesheet" href="css/mask.css">
+    <script>
+        var now = document.querySelector(':root');
+
+        function color_get(){
+            var rs = getComputedStyle(now);
+            alert("color is " + rs.getPropertyValue('--gray'));
+        }
+        function color_set(){
+            now.style.setProperty('--gray','blue');
+        }
+    </script>
+</head>
+<body>
+    <div class="mask">
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem delectus cumque fugiat numquam nemo doloribus nulla vero voluptates assumenda ullam, ab blanditiis dolor reprehenderit et illo veniam necessitatibus atque corporis.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima laudantium voluptates delectus quod, modi, aut sint nemo non fugiat ullam vero fugit odio quia eaque iure ut amet totam alias.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis molestiae officia possimus tempore illo nulla quis obcaecati labore, consequatur quod at maxime perspiciatis ducimus quos nemo aut ullam amet magni.
+        </p>
+    </div>
+    <h2>CSS Button</h2>
+    <div class="container">
+        <img src="images/spring.jpg" alt ="spring">
+        <button class="btn"><span>Hover </span></button>
+    </div>
+
+    <h2>Pagination</h2>
+    <div class="page_wrap">
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>                
+            <a href="#">2</a>
+            <a href="#">3</a>        
+            <a href="#">4</a>
+            <a href="#">5</a>  
+            <a href="#">&raquo;</a>   
+        </div>
+    </div>
+
+    <h2>Columns</h2>
+    <div class="newspaper">
+        <h4>Lorem ipsum, sample text</h4>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis veritatis voluptate iure, in esse quam facilis ex est accusantium dolor nesciunt, eveniet laborum error velit inventore sequi exercitationem debitis quas.
+        Beatae accusantium dolores quisquam quis consequuntur. Non ducimus nesciunt officia illo! Eveniet porro molestias commodi temporibus atque autem earum nisi dolorum, sunt suscipit error corrupti aliquam, similique quisquam nesciunt culpa.
+        Adipisci, voluptatem! Nulla quia sequi error, voluptatem ad exercitationem eius adipisci? Iste ratione dignissimos non magnam eos nobis harum nisi, sint aliquid laborum vero accusamus eaque sit corporis amet et!
+    </div>
+
+    <div class="change">
+        <button type="button" onclick = "color_get()">Check color</button>
+        <button type="button" onclick="color_set()">Change color</button>
+    </div>
+</body>
+</html>
