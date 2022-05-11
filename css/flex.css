@@ -1,0 +1,74 @@
+*{
+    box-sizing: border-box;
+}
+:root{
+    --padding : 15px;
+}
+body{
+    margin : 0;
+}
+.header{
+    background-color : #f1f1f1;
+    border-bottom: 2px solid lightgray;
+    text-align: center;
+    line-height: 150px;
+}
+.header h2{
+    display: inline-block;
+    line-height: 1.5;
+    vertical-align: middle;
+}
+.navbar{
+    display: flex;
+    background-color: #8b8b8b;
+
+}
+.navbar a{
+    text-decoration: none;
+    color : black;
+    text-align: center;
+    font-size : 20px;
+    padding : 5px var(--padding);
+}
+.navbar a:hover{
+    background-color: #f38282;
+}
+.main_wrap{
+    display: flex; 
+    flex-wrap: wrap;
+}
+.side{
+    flex : 30%;
+    background-color: #f8e4e4;
+    padding : var(--padding);
+}
+.side .profile{
+    width: 100%;
+    padding : 0 var(--padding);
+}
+.profile img{
+    width: 100%;
+}
+.main{
+    flex : 70%;
+    padding : var(--padding);
+}
+.project{
+    margin : 30px 10px;
+}
+.main_wrap::after{
+    clear: both;
+    content:"";
+    display: table;
+}
+.footer{
+    text-align: center;
+    padding : 20px;
+    background-color: #f1f1f1;
+    margin : 0;
+}
+@media screen and (max-width : 695px) {
+    .main_wrap, .navbar{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+    <style>
+        .div1{
+            float: left;
+            border : 2px double black;
+            width: 150px;
+            height: 180px;
+            overflow : auto;          
+        }
+        .div_wrap::after{
+            clear : both;
+            content : "";
+            display: table;
+        }
+    </style>
+</head>
+<body>
+    <h2>Float</h2>
+    <div class= "div_wrap">
+        <div class= "div1">
+            <h4>Floating box</h4> 
+        </div>
+        <div class="div1">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                Accusantium sequi veritatis laudantium dolor qui asperiores provident mollitia distinctio rem, 
+                eum commodi hic alias cumque eveniet dignissimos libero numquam in illo!
+                Voluptas tenetur et porro impedit, 
+                soluta consequatur velit facere eum? 
+            </p>
+        </div> 
+        <div class="div1">
+            some text ......
+        </div>
+        <div class="div1">
+            <img src="images/border.png" alt="border">
+        </div> 
+    </div>
+</body>
+</html>
