@@ -47,7 +47,8 @@ body{
     padding : 0 var(--padding);
 }
 .profile img{
-    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 .main{
     flex : 70%;
@@ -70,8 +71,5 @@ body{
 @media screen and (max-width : 695px) {
     .main_wrap, .navbar{
         flex-direction: column;
-    }
-    .profile{
-        display : none;
     }
 }
