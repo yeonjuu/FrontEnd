@@ -71,4 +71,7 @@ body{
     .main_wrap, .navbar{
         flex-direction: column;
     }
+    .profile{
+        display : none;
+    }
 }
