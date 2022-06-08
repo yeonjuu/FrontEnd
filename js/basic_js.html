@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic JS</title>
+</head>
+<body>
+    <h2>JavaScript -Beginner</h2>
+    <p id="js1">JavaScript change <b>content</b></p>
+    <button type="button" onclick='document.getElementById("js1").innerHTML = "HI~"'>Click</button>
+    <p id="js2">JavaScript change CSS</p>
+    <button type="button" onclick='document.getElementById("js2").style.fontSize = "35px"'>Click</button>
+
+    <script>
+        console.log("log the data");
+    </script>
+    <p>
+        <h3>Variable : var, let and const</h3>
+        var : no block scope (only global and function scope) and re-declare <br>
+        let : block scope and no re-declare <br>
+        const : Block scope, no redeclared and no reassign <br> 
+        -> must be assigned when they are declared.<br>
+        *hoisting (호이스팅) <br>
+        : 인터프리터가 변수와 함수의 메모리 공간을 선언 하기 전에 미리 할당 <br>
+        : 변수를 정의하는 코드보다 사용하는 코드가 앞서 등장할 수 있음 <br>
+        var are hoisted to the top and can be initialized 
+    </p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    
+    <script>
+        val1 = 5;
+        val2 = 7;
+        document.getElementById('demo1').innerHTML = "val1 multiply by val2 is "+(val1*val2);
+        var val1, val2;
+
+        var str1 = 16+4+"String";
+        var str2 = "String" +16+4;
+        document.getElementById('demo2').innerHTML = str1 + " " + str2;        
+    </script>
+    <p>
+        <h3>Objects, data type</h3>
+        const car = {type : "Fiat" , year : "2018", color : "white"}; like this. <br>
+        objects is written as pairs ( name : value )<br>
+        IS differents Java, so doesnt declare Number,String and Boolean to objects.!
+    </p>
+
+    <h3>JavaScript String Method</h3>
+    <p id="pad"></p>
+    <p id="backtick"></p>
+
+    <script>
+        let txt = "5";
+        document.getElementById("pad").innerHTML = txt.padStart(4,"@") + "  , " + txt.padEnd(4,"@");
+        document.getElementById("backtick").innerHTML = `He said "What's your name?"`
+        let txt2 = 
+        `String1 
+        String2
+        String3`;
+        document.getElementById("backtick").innerHTML = txt2;
+    </script>
+
+    <p id="str"></p>
+    <script>
+        document.getElementById("str").innerHTML = `The value of 9 + 10 : ${9+10}`;
+    </script>
+
+    <p id="liter"></p>
+
+    <script>
+        let header = "Templates Literals";
+        let item = ["templates literal","javascripts" , "es6"];
+        let html = `<h2>${header}</h2><ul>`;
+        
+        for (const x of item){
+            html += `<li>${x}</li>`;
+        }
+        html += `</ul>`;
+
+        document.getElementById("liter").innerHTML = html;
+    </script>
+    <h3>Sort() function and Fisher Yates Morden Algorithm</h3>
+    <button type="button" onclick="myFunction()">Try it!</button>
+    <p id="shuffle"></p>
+    <script>
+        function myFunction(){
+            let arr = ['a','b','c','d','e','f','g'];
+            let i = arr.length;
+            let j, temp;
+            while(--i > 0){
+                j = Math.floor(Math.random()*(i));
+                temp = arr[j];
+                arr[j] = arr[i];
+                arr[i] = temp; 
+            }
+            document.getElementById("shuffle").innerHTML= arr;
+        }
+        const today = new Date();
+        document.write(today+'<br>');
+    </script>
+
+    <h3>JavaScript , Loop</h3>
+    <ol>
+        <li>if else</li>
+        <li>switch</li>
+        <li>for</li>
+        <li>while</li>
+        <li>do/while</li>
+    </ol>
+    <script>
+        let i = 0;
+        while(i<10){
+            console.log(i);
+            i++;
+        }
+        const name = "Yeonju";
+        for (const x of name){
+            console.log(x);
+        }
+        const letters = new Set(["a","b","c"]);
+        for (const x of letters){
+            document.write(x+"\t");
+        }
+        document.write("<br>");
+        const fruits = new Map([
+            ["apple",300],
+            ["banana",400],
+            ["melon",500]
+        ]);
+        for (const x of fruits){
+            document.write(x+"<br>");
+        }
+    </script>
+   
+</body>
+</html>
